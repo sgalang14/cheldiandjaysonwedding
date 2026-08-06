@@ -1,0 +1,812 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Jayson & Cheldi | November 12, 2026</title>
+        <link rel="icon" type="image/png" href="images/favicon.png" />
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link
+            rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+        />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&family=Great+Vibes&family=Montaga&family=Cinzel:wght@400;500;600;700&family=Dancing+Script:wght@400;500;600;700&family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400&&family=Montserrat:wght@400;500;600&display=swap&display=swap"
+            rel="stylesheet"
+        />
+        <link rel="stylesheet" href="css/style.css" />
+    </head>
+    <body>
+        <!-- ============ NAV ============ -->
+        <nav class="nav" id="nav">
+            <div class="nav-monogram">
+                <image src="images/monogram-logo.png" alt="Jayson & Cheldi Logo" />
+            </div>
+            <button class="nav-toggle" id="navToggle" aria-label="Menu">
+                <span></span><span></span><span></span>
+            </button>
+            <ul class="nav-links" id="navLinks">
+                <li><a href="#hero">The Wedding</a></li>
+                <li><a href="#story">Our Story</a></li>
+                <li><a href="#details">Details</a></li>
+                <li><a href="#faq">FAQs</a></li>
+                <li><a href="#rsvp">RSVP</a></li>
+            </ul>
+        </nav>
+
+        <!-- ============ HERO ============ -->
+        <header class="hero" id="hero">
+            <div class="hero-content">
+                <div class="hero-names">
+                    <span class="who">Jayson</span>&nbsp;<span class="amp">&amp;</span>&nbsp;<span
+                        class="who"
+                        >Cheldi</span
+                    >
+                </div>
+
+                <div class="hero-date">
+                    <div class="weekday">Thursday<br />2:00 PM</div>
+                    <div class="day">12</div>
+                    <div class="month">November<br />2026</div>
+                </div>
+
+                <a class="rsvp-btn" href="#rsvp"
+                    >Click to RSVP
+                    <svg
+                        width="16"
+                        height="16"
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        stroke="currentColor"
+                        stroke-width="2"
+                    >
+                        <rect x="3" y="4" width="18" height="18" rx="2"></rect>
+                        <path d="M16 2v4M8 2v4M3 10h18"></path>
+                    </svg>
+                </a>
+            </div>
+            <div class="scroll-cue"></div>
+        </header>
+
+        <div class="countdown-wrapper">
+            <div class="reveal">
+                <div class="countdown-caption">Days left before we say &ldquo;I Do&rdquo;</div>
+                <div class="countdown" id="countdown">
+                    <div class="countdown-box">
+                        <span class="num" id="cd-days">--</span><span class="lbl">Days</span>
+                    </div>
+                    <div class="countdown-box">
+                        <span class="num" id="cd-hours">--</span><span class="lbl">Hours</span>
+                    </div>
+                    <div class="countdown-box">
+                        <span class="num" id="cd-mins">--</span><span class="lbl">Minutes</span>
+                    </div>
+                    <div class="countdown-box">
+                        <span class="num" id="cd-secs">--</span><span class="lbl">Seconds</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- ============ LOVE STORY ============ -->
+        <section class="story" id="story">
+            <h2 class="section-eyebrow reveal">Our Love Story</h2>
+            <p class="section-sub story-sub reveal">10 years, forever to go</p>
+
+            <div class="story-body">
+                <div class="story-photos reveal">
+                    <img src="images/love-story-1.jpg" alt="Jayson and Cheldi, casual portrait" />
+                    <img src="images/love-story-2.jpg" alt="Jayson and Cheldi, garden portrait" />
+                </div>
+                <div class="story-text reveal-stagger">
+                    <p>
+                        Cheldi and Jayson met in 2016, and what started as a simple connection grew
+                        into something truly special. Though shy at first, Jayson eventually
+                        confessed his feelings when Cheldi playfully asked. From that moment, their
+                        love began to grow.
+                    </p>
+                    <p>
+                        Over the years, their bond grew stronger through their shared faith,
+                        motorcycle rides, travels, and the simple moments they cherished together.
+                    </p>
+                    <p>
+                        After 10 years, Jayson proposed on October 31, 2025, during a trip at Villa
+                        Jovita Resort in Batangas. When Cheldi saw the shirt under his jacket that
+                        read &ldquo;Will you marry me?&rdquo;, she was completely surprised and
+                        without hesitation, she said Yes.
+                    </p>
+                    <p>Now, they begin their forever.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- ============ PRENUP VIDEO ============ -->
+        <section class="video-section reveal" id="video">
+            <div class="video-frame" id="videoFrame">
+                <video id="prenupVideo" poster="images/poster.jpg" playsinline>
+                    <source src="images/save-the-date.mp4" type="video/mp4" />
+                </video>
+                <div class="video-play-overlay" id="videoOverlay">
+                    <div class="video-play-btn">
+                        <svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"></path></svg>
+                    </div>
+                </div>
+                <div class="video-caption">Our Prenup Film</div>
+                <div class="video-controls">
+                    <div class="video-progress-row">
+                        <span id="vTimeCurrent">0:00</span>
+                        <div class="video-progress" id="vProgress">
+                            <div class="video-progress-fill" id="vProgressFill"></div>
+                        </div>
+                        <span id="vTimeTotal">0:00</span>
+                    </div>
+                    <div class="video-buttons-row">
+                        <div class="video-buttons-left">
+                            <button id="vMute" aria-label="Mute">
+                                <svg viewBox="0 0 24 24">
+                                    <path d="M11 5L6 9H2v6h4l5 4V5z"></path>
+                                    <path d="M15.5 8.5a5 5 0 010 7"></path>
+                                </svg>
+                            </button>
+                            <button id="vPlayPause" aria-label="Play or pause">
+                                <svg viewBox="0 0 24 24" class="pause-icon">
+                                    <path d="M6 5h4v14H6zM14 5h4v14h-4z"></path>
+                                </svg>
+                            </button>
+                        </div>
+                        <div class="video-buttons-right">
+                            <button id="vFullscreen" aria-label="Fullscreen">
+                                <svg viewBox="0 0 24 24">
+                                    <path d="M4 9V4h5M20 9V4h-5M4 15v5h5M20 15v5h-5"></path>
+                                </svg>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ============ TIMELINE ============ -->
+        <section class="timeline-section" id="timeline">
+            <h2 class="section-eyebrow reveal">Wedding Timeline</h2>
+            <p class="timeline-date reveal">November 12, 2026</p>
+
+            <div class="timeline reveal-stagger">
+                <div class="timeline-item">
+                    <span class="timeline-time">2:00 PM</span>
+                    <div class="timeline-icon">
+                        <img src="images/timeline/arrival.png" alt="Arrival icon" />
+                    </div>
+                    <span class="timeline-label">Arrival</span>
+                </div>
+                <div class="timeline-item">
+                    <span class="timeline-time">2:30 PM</span>
+                    <div class="timeline-icon">
+                        <img src="images/timeline/march.png" alt="Arrival icon" />
+                    </div>
+                    <span class="timeline-label">Processional &amp; Bridal March</span>
+                </div>
+                <div class="timeline-item">
+                    <span class="timeline-time">3:00 PM</span>
+                    <div class="timeline-icon">
+                        <img src="images/timeline/ceremony.png" alt="Arrival icon" />
+                    </div>
+                    <span class="timeline-label">Ceremony</span>
+                </div>
+                <div class="timeline-item">
+                    <span class="timeline-time">5:00 PM</span>
+                    <div class="timeline-icon">
+                        <img src="images/timeline/photos.png" alt="Arrival icon" />
+                    </div>
+                    <span class="timeline-label">Photos &amp; Cocktail Hour</span>
+                </div>
+                <div class="timeline-item">
+                    <span class="timeline-time">6:00 PM &amp; Beyond</span>
+                    <div class="timeline-icon">
+                        <img src="images/timeline/dinner.png" alt="Arrival icon" />
+                    </div>
+                    <span class="timeline-label">Dinner &amp; Program</span>
+                </div>
+            </div>
+        </section>
+
+        <!-- ============ GALLERY ============ -->
+        <section class="gallery" id="photos">
+            <a class="reveal"
+                ><img src="images/gallery-1/g1.jpg" alt="Couple photo one" loading="lazy"
+            /></a>
+            <a class="reveal"
+                ><img src="images/gallery-1/g2.jpg" alt="Couple photo two" loading="lazy"
+            /></a>
+            <a class="reveal"
+                ><img src="images/gallery-1/g3.jpg" alt="Couple photo three" loading="lazy"
+            /></a>
+            <a class="reveal"
+                ><img src="images/gallery-1/g4.jpg" alt="Couple photo four" loading="lazy"
+            /></a>
+        </section>
+
+        <!-- ============ ENTOURAGE ============ -->
+        <section class="entourage" id="entourage">
+            <div class="entourage-heading reveal">
+                <p class="entourage-title">Entourage</p>
+                <p class="entourage-names">Rohr - Garcia</p>
+                <p class="entourage-kicker">NUPTIALS</p>
+            </div>
+
+            <div class="entourage-block">
+                <div class="entourage-row reveal">
+                    <h4>Wedding Officiant</h4>
+                    <p>Ptr. Sandy San Diego</p>
+                </div>
+
+                <div class="entourage-cols reveal-stagger">
+                    <div class="entourage-row" style="margin-top: 0">
+                        <h4>Parents of the Groom</h4>
+                        <p>Leo Garcia<br />Jiji Garcia</p>
+                    </div>
+                    <div class="entourage-row" style="margin-top: 0">
+                        <h4>Parents of the Bride</h4>
+                        <p>Michael Rohr<br />Saudi Rohr</p>
+                    </div>
+                </div>
+
+                <hr class="entourage-divider" />
+
+                <div class="entourage-row reveal">
+                    <h4>Principal Sponsors</h4>
+                    <p class="note">To stand as principal witnesses in our exchange of vows</p>
+                </div>
+                <div class="entourage-cols reveal-stagger">
+                    <p>
+                        Mariel Robredillo<br />
+                        Jonathan Abordo<br />
+                        Willie Camus<br />
+                        Kim Narciso<br />
+                        Renier Turan
+                    </p>
+                    <p>
+                        Rose Gerardo<br />
+                        Yasmin Blanca<br />
+                        Evelyn Pablo<br />
+                        Vanessa Mendoza<br />
+                        Melinda Santos
+                    </p>
+                </div>
+
+                <div class="entourage-row reveal">
+                    <p class="note">To assist us in our needs</p>
+                </div>
+                <div class="entourage-cols reveal-stagger">
+                    <div class="entourage-row" style="margin-top: 0">
+                        <h4>Best Man</h4>
+                        <p>Jenard Gabagat</p>
+                    </div>
+                    <div class="entourage-row" style="margin-top: 0">
+                        <h4>Maid of Honor</h4>
+                        <p>Shariena Galang</p>
+                    </div>
+                </div>
+
+                <div class="entourage-row reveal">
+                    <p class="note">To guide us on our way</p>
+                </div>
+                <div class="entourage-cols reveal-stagger">
+                    <div class="entourage-row" style="margin-top: 0">
+                        <h4>Groomsmen</h4>
+                        <p>
+                            Kenneth Charles Estrada<br />
+                            Joshua Francisco<br />
+                            Richard Gregorio<br />
+                            Arjay Laurito<br />
+                            Jeremiah Reyes<br />
+                            Generey Dela Cruz<br />
+                            Ariel Julius Blanca<br />
+                            Johnrick Quinto<br />
+                        </p>
+                    </div>
+                    <div class="entourage-row" style="margin-top: 0">
+                        <h4>Bridesmaids</h4>
+                        <p>
+                            Mika Ella Rohr<br />
+                            Lorly Limbaga<br />
+                            Danica Jacobe<br />
+                            Rona Urita<br />
+                            Michelle Rohr<br />
+                            Pearl Dela Cruz<br />
+                            Rhona Pios<br />
+                            Cindy Rohr<br />
+                        </p>
+                    </div>
+                </div>
+
+                <div
+                    class="entourage-cols entourage-cols-1 reveal-stagger"
+                    style="margin-top: 56px"
+                >
+                    <div class="entourage-row" style="margin-top: 0">
+                        <p class="note" style="margin-bottom: 12px">To bind us together</p>
+                        <h4>Cord</h4>
+                        <p>Ptr. Jon San Diego<br />Jovis San Diego</p>
+                    </div>
+                    <div class="entourage-row" style="margin-top: 0">
+                        <p class="note" style="margin-bottom: 12px">To light our path</p>
+                        <h4>Candle</h4>
+                        <p>Rendon Romero<br />Rachel Turan</p>
+                    </div>
+                    <div class="entourage-row" style="margin-top: 0">
+                        <p class="note" style="margin-bottom: 12px">To clothe us as one</p>
+                        <h4>Veil</h4>
+                        <p>Leonard Suganob<br />Mia Menciano Suganob</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ============ WEDDING DETAILS ============ -->
+        <section id="details">
+            <div class="details-banner">
+                <p class="details-title reveal">Wedding Details</p>
+                <p class="details-verse reveal">
+                    &ldquo;I have found the one whom my soul loves.&rdquo;
+                </p>
+                <p class="details-verse-ref reveal">Song of Solomon 3:4</p>
+            </div>
+
+            <div class="details-card reveal">
+                <h3>Ceremony and Reception</h3>
+                <p class="details-venue">Artan Garden Resort</p>
+                <p class="details-address">92 JP Rizal Street, Brgy. Santa Lucia, Novaliches, Quezon City</p>
+
+                <div class="details-media">
+                    <img
+                        src="images/venue.jpg"
+                        alt="Wedding venue exterior"
+                    />
+                    <iframe
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d4989.762872202882!2d121.0484554!3d14.7039913!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3397b0c26feb84f7%3A0x36597a809ec6ddba!2sArtan%20Garden!5e1!3m2!1sen!2sph!4v1785991261737!5m2!1sen!2sph"
+                        loading="lazy"
+                        referrerpolicy="no-referrer-when-downgrade"
+                        title="Venue location map"
+                    >
+                    </iframe>
+                </div>
+
+                <a
+                    class="maps-btn"
+                    href="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d4989.762872202882!2d121.0484554!3d14.7039913!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3397b0c26feb84f7%3A0x36597a809ec6ddba!2sArtan%20Garden!5e1!3m2!1sen!2sph!4v1785991261737!5m2!1sen!2sph"
+                    target="_blank"
+                    rel="noopener"
+                >
+                    <svg viewBox="0 0 24 24">
+                        <path
+                            d="M12 2C7.6 2 4 5.6 4 10c0 6 8 12 8 12s8-6 8-12c0-4.4-3.6-8-8-8zm0 11a3 3 0 110-6 3 3 0 010 6z"
+                        ></path>
+                    </svg>
+                    Open in Google Maps
+                </a>
+            </div>
+        </section>
+
+        <!-- ============ DRESS CODE ============ -->
+        <section class="dresscode" id="dresscode">
+            <h2 class="section-eyebrow reveal">Dress Code</h2>
+            <p class="dresscode-sub reveal">
+                We hope that you take this as a fun excuse to dress up and be fab. <br/>We kindly request
+                our guests to wear these colors for our special day!
+            </p>
+
+            <div class="dresscode-groups reveal-stagger">
+                <div class="dresscode-group">
+                    <h4>Principal Sponsors</h4>
+                    <p class="rule">
+                        <strong>Male:</strong> Dark gray suit (dusty blue tie optional) or any
+                        formal attire in dark gray tones
+                    </p>
+                    <p class="rule"><strong>Female:</strong> Gray gown or dress</p>
+                    <div class="swatches">
+                        <div class="swatch">
+                            <div class="swatch-circle" style="background: #d8d6d2"></div>
+                            <span>Light Gray</span>
+                        </div>
+                        <div class="swatch">
+                            <div class="swatch-circle" style="background: #a9a6a0"></div>
+                            <span>Mid Gray</span>
+                        </div>
+                        <div class="swatch">
+                            <div class="swatch-circle" style="background: #5b5854"></div>
+                            <span>Charcoal</span>
+                        </div>
+                    </div>
+                    <div class="dress-figures">
+                        <svg viewBox="0 0 60 130" fill="none">
+                            <circle cx="30" cy="18" r="10" fill="#E7C6A5" />
+                            <path
+                                d="M12 128l4-58c1-14 8-20 14-20s13 6 14 20l4 58"
+                                fill="#F4F1EA"
+                                stroke="#D8D6D2"
+                                stroke-width="1.5"
+                            />
+                            <path d="M22 50v78M38 50v78" stroke="#D8D6D2" stroke-width="1.2" />
+                        </svg>
+                        <svg viewBox="0 0 60 130" fill="none">
+                            <circle cx="30" cy="16" r="9" fill="#DDB48C" />
+                            <rect x="17" y="24" width="26" height="46" rx="3" fill="#5B5854" />
+                            <rect x="18" y="70" width="10" height="56" fill="#3A3835" />
+                            <rect x="32" y="70" width="10" height="56" fill="#3A3835" />
+                        </svg>
+                    </div>
+                </div>
+
+                <div class="dresscode-group">
+                    <h4>Guests</h4>
+                    <p class="semi">SEMI-FORMAL</p>
+                    <p class="rule">We would love to see you in these shades:</p>
+                    <div class="swatches">
+                        <div class="swatch">
+                            <div class="swatch-circle" style="background: #f3d6da"></div>
+                            <span>Pale Pink</span>
+                        </div>
+                        <div class="swatch">
+                            <div class="swatch-circle" style="background: #d69aa0"></div>
+                            <span>Dusty Rose</span>
+                        </div>
+                        <div class="swatch">
+                            <div class="swatch-circle" style="background: #8c6470"></div>
+                            <span>Mauve</span>
+                        </div>
+                        <div class="swatch">
+                            <div class="swatch-circle" style="background: #c7cdd1"></div>
+                            <span>Gentle Gray</span>
+                        </div>
+                        <div class="swatch">
+                            <div class="swatch-circle" style="background: #3f6788"></div>
+                            <span>Muted Blue</span>
+                        </div>
+                    </div>
+                    <div class="dress-figures">
+                        <svg viewBox="0 0 40 130" fill="none">
+                            <circle cx="20" cy="16" r="8" fill="#E7C6A5" />
+                            <path d="M8 128l3-54c1-12 6-18 9-18s8 6 9 18l3 54" fill="#F3D6DA" />
+                        </svg>
+                        <svg viewBox="0 0 40 130" fill="none">
+                            <circle cx="20" cy="16" r="8" fill="#DDB48C" />
+                            <path d="M7 128l3-56c1-12 7-18 10-18s9 6 10 18l3 56" fill="#D69AA0" />
+                        </svg>
+                        <svg viewBox="0 0 40 130" fill="none">
+                            <circle cx="20" cy="16" r="8" fill="#E7C6A5" />
+                            <path d="M8 128l3-54c1-12 6-18 9-18s8 6 9 18l3 54" fill="#8C6470" />
+                        </svg>
+                        <svg viewBox="0 0 40 130" fill="none">
+                            <circle cx="20" cy="15" r="8" fill="#DDB48C" />
+                            <rect x="10" y="22" width="20" height="40" rx="3" fill="#C7CDD1" />
+                            <rect x="11" y="62" width="8" height="62" fill="#3A3835" />
+                            <rect x="21" y="62" width="8" height="62" fill="#3A3835" />
+                        </svg>
+                        <svg viewBox="0 0 40 130" fill="none">
+                            <circle cx="20" cy="15" r="8" fill="#E7C6A5" />
+                            <rect x="10" y="22" width="20" height="40" rx="3" fill="#3F6788" />
+                            <rect x="11" y="62" width="8" height="62" fill="#3A3835" />
+                            <rect x="21" y="62" width="8" height="62" fill="#3A3835" />
+                        </svg>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ============ CLOSING GALLERY ============ -->
+        <section class="gallery gallery-warm">
+            <a class="reveal"
+                ><img
+                    src="https://picsum.photos/seed/jayson-cheldi-07/500/650"
+                    alt="Couple photo five"
+                    loading="lazy"
+            /></a>
+            <a class="reveal"
+                ><img
+                    src="https://picsum.photos/seed/jayson-cheldi-08/500/650"
+                    alt="Couple photo six"
+                    loading="lazy"
+            /></a>
+            <a class="reveal"
+                ><img
+                    src="https://picsum.photos/seed/jayson-cheldi-09/500/650"
+                    alt="Couple photo seven"
+                    loading="lazy"
+            /></a>
+            <a class="reveal"
+                ><img
+                    src="https://picsum.photos/seed/jayson-cheldi-10/500/650"
+                    alt="Couple photo eight"
+                    loading="lazy"
+            /></a>
+        </section>
+
+        <!-- ============ REMINDERS ============ -->
+        <section class="reminders" id="reminders">
+            <div class="story-bloom b1"></div>
+            <h2 class="section-eyebrow reveal">Reminders</h2>
+
+            <div class="reminders-grid reveal-stagger">
+                <div class="reminder-card clickable" id="giftGuideCard">
+                    <div class="reminder-icon">
+                        <svg viewBox="0 0 24 24">
+                            <rect x="3" y="8" width="18" height="4"></rect>
+                            <rect x="5" y="12" width="14" height="9"></rect>
+                            <path
+                                d="M12 8v13M12 8c-1.5-3-6-3.5-6-1s2.5 1 6 1zM12 8c1.5-3 6-3.5 6-1s-2.5 1-6 1z"
+                            ></path>
+                        </svg>
+                    </div>
+                    <h4>Gift Guide</h4>
+                    <p>
+                        Your presence is the greatest gift of all. If you'd like to give a gift, a
+                        monetary gesture will help us set forth on our journey as a married couple.
+                        Your thoughtfulness warms our hearts.
+                    </p>
+                    <span class="tap-hint">Tap for bank details</span>
+                </div>
+
+                <div class="reminder-card">
+                    <div class="reminder-icon">
+                        <svg viewBox="0 0 24 24">
+                            <rect x="3" y="7" width="18" height="13" rx="2"></rect>
+                            <path d="M8 7l1.5-3h5L16 7"></path>
+                            <circle cx="12" cy="13.5" r="3.5"></circle>
+                        </svg>
+                    </div>
+                    <h4>Unplugged Ceremony</h4>
+                    <p>
+                        The greatest gift you can give us today is your full presence. During the
+                        ceremony, we kindly ask that all phones and cameras be turned off so
+                        everyone can fully share this special moment with us.
+                    </p>
+                </div>
+
+                <div class="reminder-card">
+                    <div class="reminder-icon">
+                        <svg viewBox="0 0 24 24">
+                            <path
+                                d="M9 6h.01M9 10h.01M9 14h.01M15 6h.01M15 10h.01M15 14h.01M4 18h16M6 6v12M18 6v12"
+                            ></path>
+                        </svg>
+                    </div>
+                    <h4>Snap &amp; Share</h4>
+                    <p>
+                        Help us capture the love! Tag your photos and share the memories using our
+                        hashtag:
+                    </p>
+                    <span class="hashtag">#JaysOnlyOneForCheldi</span>
+                    <span class="hashtag">#JaysonAndCheldiWedding</span>
+                </div>
+            </div>
+        </section>
+
+        <!-- ============ GIFT GUIDE MODAL ============ -->
+        <div class="modal-overlay" id="giftModal">
+            <div class="modal-box">
+                <button class="modal-close" id="giftModalClose" aria-label="Close">
+                    <svg viewBox="0 0 24 24"><path d="M6 6l12 12M18 6L6 18"></path></svg>
+                </button>
+                <h3>With Love &amp; Gratitude</h3>
+                <p class="sub">Scan to send your gift our way</p>
+                <div class="modal-qr">
+                    <img
+                        src="https://api.qrserver.com/v1/create-qr-code/?size=300x300&data=BankAccount%3A%20Jayson%20Garcia%20%26%20Cheldi%20Rohr%20-%20Placeholder%20Bank%20Account%20123-456-7890"
+                        alt="Bank QR code"
+                    />
+                </div>
+                <p class="bank-name">Placeholder Bank</p>
+                <p class="acct">Account Name: Jayson &amp; Cheldi &middot; Acct No. 123-456-7890</p>
+            </div>
+        </div>
+
+        <!-- ============ FAQ ============ -->
+        <section class="faq" id="faq">
+            <h2 class="reveal">Frequently Asked Questions</h2>
+            <div class="faq-grid reveal-stagger">
+                <div class="faq-item">
+                    <h5>
+                        <svg viewBox="0 0 24 24">
+                            <rect x="3" y="5" width="18" height="16" rx="2"></rect>
+                            <path d="M3 10h18M8 3v4M16 3v4"></path></svg
+                        >Why RSVP is so important?
+                    </h5>
+                    <p>
+                        To ensure we have the perfect seating and enough refreshments for everyone,
+                        please kindly confirm your attendance. Having an accurate guest list allows
+                        us to finalize our arrangements.
+                        <strong>Please RSVP by October 12, 2026.</strong>
+                    </p>
+                </div>
+                <div class="faq-item">
+                    <h5>
+                        <svg viewBox="0 0 24 24">
+                            <circle cx="12" cy="8" r="3.4"></circle>
+                            <path d="M5 20c0-4 3-6.5 7-6.5s7 2.5 7 6.5"></path></svg
+                        >Can I bring someone with me?
+                    </h5>
+                    <p>
+                        We do apologize but this is an invite-only event. As much as we would love
+                        to spend this day with all the people we love, we only have limited
+                        resources, so we opt to spend this day with the people who are most dear to
+                        us as a couple.
+                    </p>
+                </div>
+                <div class="faq-item">
+                    <h5>
+                        <svg viewBox="0 0 24 24">
+                            <circle cx="12" cy="6" r="2.4"></circle>
+                            <path d="M12 8.4v6M8 12l4-1.5L16 12M9 20l3-6 3 6"></path></svg
+                        >Can I bring my kids?
+                    </h5>
+                    <p>
+                        Although we love your children, we regretfully cannot accommodate them at
+                        the venue due to limited seating. We hope you are able to join us anyway and
+                        enjoy a relaxed evening with us.
+                    </p>
+                </div>
+                <div class="faq-item">
+                    <h5>
+                        <svg viewBox="0 0 24 24">
+                            <path d="M8 4L4 8l3 3 2-2v9h6v-9l2 2 3-3-4-4-3 2-3-2z"></path></svg
+                        >Is there a dress code?
+                    </h5>
+                    <p>
+                        We kindly ask guests to dress in a semi-formal attire with a color of our
+                        motif. For more details, please refer to the Dress Code section on this
+                        website.
+                    </p>
+                </div>
+                <div class="faq-item">
+                    <h5>
+                        <svg viewBox="0 0 24 24">
+                            <circle cx="12" cy="12" r="9"></circle>
+                            <path d="M12 7v5l4 2"></path></svg
+                        >What time should I arrive?
+                    </h5>
+                    <p>
+                        The Processional will start at 2:45 PM and the ceremony will begin at 3:00
+                        PM. Please arrive 15&ndash;30 minutes prior to Processional start time to
+                        assure you do not miss anything and allow us to begin on time.
+                    </p>
+                </div>
+                <div class="faq-item">
+                    <h5>
+                        <svg viewBox="0 0 24 24">
+                            <path
+                                d="M5 17h14M5 17a2 2 0 01-2-2v-2l2-5a2 2 0 012-2h6a2 2 0 012 2l2 5v2a2 2 0 01-2 2M7 17v2M17 17v2"
+                            ></path></svg
+                        >When is the appropriate time to leave?
+                    </h5>
+                    <p>
+                        It would be much appreciated if you stay until the end of the program. We
+                        have planned to have this lovely wedding together with our selected guests.
+                        Please do not eat and run! *kidding*
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- ============ RSVP (Google Form) ============ -->
+        <section class="rsvp-section" id="rsvp">
+            <h2 class="section-eyebrow reveal">RSVP</h2>
+            <p class="rsvp-sub reveal">
+                We can't wait to celebrate with you! Please confirm your attendance by October 12,
+                2026 to ensure you are included on our final guest list.
+            </p>
+
+            <div class="rsvp-form-wrap reveal">
+                <iframe
+                    src="https://docs.google.com/forms/d/e/1FAIpQLSdxXnh7eL56MTqC5DQiLrWkFAOm0zhhOL0U5rn9MQ3KZqJ_Jw/viewform?embedded=true"
+                    title="Wedding RSVP form"
+                    >Loading form&hellip;</iframe
+                >
+            </div>
+        </section>
+
+        <!-- ============ FINAL GALLERY ============ -->
+        <section class="gallery gallery-warm">
+            <a class="reveal"
+                ><img
+                    src="https://picsum.photos/seed/jayson-cheldi-11/500/650"
+                    alt="Couple photo nine"
+                    loading="lazy"
+            /></a>
+            <a class="reveal"
+                ><img
+                    src="https://picsum.photos/seed/jayson-cheldi-12/500/650"
+                    alt="Couple photo ten"
+                    loading="lazy"
+            /></a>
+            <a class="reveal"
+                ><img
+                    src="https://picsum.photos/seed/jayson-cheldi-13/500/650"
+                    alt="Couple photo eleven"
+                    loading="lazy"
+            /></a>
+            <a class="reveal"
+                ><img
+                    src="https://picsum.photos/seed/jayson-cheldi-14/500/650"
+                    alt="Couple photo twelve"
+                    loading="lazy"
+            /></a>
+            <a class="reveal"
+                ><img
+                    src="https://picsum.photos/seed/jayson-cheldi-15/500/650"
+                    alt="Couple photo thirteen"
+                    loading="lazy"
+            /></a>
+            <a class="reveal"
+                ><img
+                    src="https://picsum.photos/seed/jayson-cheldi-16/500/650"
+                    alt="Couple photo fourteen"
+                    loading="lazy"
+            /></a>
+            <a class="reveal"
+                ><img
+                    src="https://picsum.photos/seed/jayson-cheldi-17/500/650"
+                    alt="Couple photo fifteen"
+                    loading="lazy"
+            /></a>
+            <a class="reveal"
+                ><img
+                    src="https://picsum.photos/seed/jayson-cheldi-18/500/650"
+                    alt="Couple photo sixteen"
+                    loading="lazy"
+            /></a>
+        </section>
+
+        <!-- ============ FOOTER ============ -->
+        <footer class="site-footer reveal">
+            <div class="footer-monogram">
+                <img
+                    src="images/monogram-logo-b.png"
+                    alt="Jayson & Cheldi logo"
+                    class="footer-logo"
+                />
+            </div>
+
+            <div class="footer-brand">
+                <p class="footer-names">Jayson &amp; Cheldi</p>
+                <div class="footer-share-row">
+                    <div class="footer-qr">
+                        <img
+                            src="https://api.qrserver.com/v1/create-qr-code/?size=200x200&data=https%3A%2F%2Fexample.com%2Fjayson-and-cheldi-photos"
+                            alt="QR code to shared photo album"
+                        />
+                    </div>
+                    <div>
+                        <p class="footer-share-text">
+                            Please share your memories from our special day.<br />Scan this QR code
+                            and upload your photos.
+                        </p>
+                        <span class="footer-hashtag">#JaysOnlyOneForCheldi</span>
+                    </div>
+                </div>
+            </div>
+        </footer>
+
+        <!-- ============ FLOATING MUSIC WIDGET ============ -->
+        <div class="music-widget">
+            <div class="music-prompt" id="musicPrompt">
+                Would you like to play our wedding song?
+                <div class="music-prompt-actions">
+                    <button class="no" id="musicNo">No</button>
+                    <button class="yes" id="musicYes">Yes, Play It</button>
+                </div>
+            </div>
+            <button class="music-btn" id="musicBtn" aria-label="Toggle wedding song">
+                <i class="fa-solid fa-volume-xmark" id="musicIcon"></i>
+                <span class="bars"><span></span><span></span><span></span></span>
+            </button>
+        </div>
+
+        <audio id="weddingAudio" loop preload="none">
+            <source src="images/wedding-song.mp3" type="audio/mp3" />
+        </audio>
+
+        <script src="js/script.js"></script>
+    </body>
+</html>
