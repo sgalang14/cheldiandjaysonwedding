@@ -1576,7 +1576,7 @@ button {
 .reminders {
     position: relative;
     padding: 100px 6vw 130px;
-    background: linear-gradient(115deg, #fbe3e6 0%, #f7f6f5 45%, #dceaf3 100%);
+    background: linear-gradient(115deg, #dceaf3 0%, #f7f6f5 45%, #fbe3e6 100%);
     overflow: hidden;
 }
 .reminders-grid {
