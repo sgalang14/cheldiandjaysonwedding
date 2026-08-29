@@ -21,7 +21,9 @@
         <!-- ============ NAV ============ -->
         <nav class="nav" id="nav">
             <div class="nav-monogram">
-                <img src="images/monogram-logo.png" alt="Jayson & Cheldi Logo" />
+                <a href="#hero">
+                    <img src="images/monogram-logo.png" alt="Jayson & Cheldi Logo" />
+                </a>
             </div>
             <button class="nav-toggle" id="navToggle" aria-label="Menu">
                 <span></span><span></span><span></span>
@@ -136,46 +138,23 @@
         <!-- ============ PRENUP VIDEO ============ -->
         <section class="video-section reveal" id="video">
             <div class="video-frame" id="videoFrame">
-                <video id="prenupVideo" poster="images/poster.jpg" playsinline>
-                    <source src="images/save-the-date.mp4" type="video/mp4" />
-                </video>
-                <div class="video-play-overlay" id="videoOverlay">
-                    <div class="video-play-btn">
-                        <svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"></path></svg>
-                    </div>
-                </div>
+                <iframe
+                    src="https://www.youtube.com/embed/xPq8NBEeb8k?si=1-oo-aMdZ6QV0KYO&rel=0"
+                    title="Jayson and Cheldi Wedding | November 12, 2026"
+                    frameborder="0"
+                    allow="
+                        accelerometer;
+                        autoplay;
+                        clipboard-write;
+                        encrypted-media;
+                        gyroscope;
+                        picture-in-picture;
+                        web-share;
+                    "
+                    referrerpolicy="strict-origin-when-cross-origin"
+                    allowfullscreen
+                ></iframe>
                 <div class="video-caption">Our Prenup Film</div>
-                <div class="video-controls">
-                    <div class="video-progress-row">
-                        <span id="vTimeCurrent">0:00</span>
-                        <div class="video-progress" id="vProgress">
-                            <div class="video-progress-fill" id="vProgressFill"></div>
-                        </div>
-                        <span id="vTimeTotal">0:00</span>
-                    </div>
-                    <div class="video-buttons-row">
-                        <div class="video-buttons-left">
-                            <button id="vMute" aria-label="Mute">
-                                <svg viewBox="0 0 24 24">
-                                    <path d="M11 5L6 9H2v6h4l5 4V5z"></path>
-                                    <path d="M15.5 8.5a5 5 0 010 7"></path>
-                                </svg>
-                            </button>
-                            <button id="vPlayPause" aria-label="Play or pause">
-                                <svg viewBox="0 0 24 24" class="pause-icon">
-                                    <path d="M6 5h4v14H6zM14 5h4v14h-4z"></path>
-                                </svg>
-                            </button>
-                        </div>
-                        <div class="video-buttons-right">
-                            <button id="vFullscreen" aria-label="Fullscreen">
-                                <svg viewBox="0 0 24 24">
-                                    <path d="M4 9V4h5M20 9V4h-5M4 15v5h5M20 15v5h-5"></path>
-                                </svg>
-                            </button>
-                        </div>
-                    </div>
-                </div>
             </div>
         </section>
 
@@ -502,7 +481,7 @@
 
         <!-- ============ REMINDERS ============ -->
         <section class="reminders" id="reminders">
-                        <img
+            <img
                 class="entourage-flower entourage-flower-top-left"
                 src="images/top-left.png"
                 alt=""
@@ -526,7 +505,7 @@
                 alt=""
                 aria-hidden="true"
             />
-            
+
             <h2 class="section-eyebrow reveal">Reminders</h2>
 
             <div class="reminders-grid reveal-stagger">
