@@ -100,6 +100,11 @@ const musicIcon = document.getElementById("musicIcon");
 let isPlaying = false;
 
 function playMusic() {
+    // Start music at 0:06
+    if (audio.currentTime < 6) {
+        audio.currentTime = 6;
+    }
+    
     audio.play().catch(() => {
         /* autoplay blocked; user can retry via button */
     });
