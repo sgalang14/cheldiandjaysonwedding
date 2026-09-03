@@ -467,7 +467,7 @@ button {
     .countdown-wrapper {
         width: 100%;
         min-height: 250px;
-        margin-top: 0;
+        margin-top: -2px;
         margin-bottom: 0;
         padding: 76px 16px;
         background-position: 22% 43%;
@@ -588,8 +588,7 @@ button {
 .section-eyebrow span {
     font-family: var(--dancing);
     font-size: 30px;
-    color: var(--blue-deep);
-    margin-top: 18px;
+    color: #769ab5;
     display: block;
 }
 .section-sub {
@@ -1289,7 +1288,7 @@ button {
 .entourage-row .note {
     font-family: var(--dancing);
     color: #2b72b2;
-    font-size: 1.3rem;
+    font-size: 1.1rem;
     text-transform: none;
     text-align: center !important;
 }
@@ -1298,6 +1297,9 @@ button {
     font-size: 1.08rem;
     line-height: 1.5;
     text-transform: capitalize;
+}
+.entourage-row.ptr {
+    margin-bottom: 35px;
 }
 .entourage-cols {
     display: grid;
@@ -1334,22 +1336,25 @@ button {
     }
     .entourage-cols {
         margin-top: 20px;
+        gap: 10px;
     }
     .entourage-cols-1 {
-        grid-template-columns: 1fr !important;
+        grid-template-columns: 1fr 1fr !important;
     }
     .entourage-cols p:first-child {
         text-align: center;
     }
     .entourage-row h4 {
         font-size: 0.74rem;
-        margin-bottom: 10px;
+        margin-bottom: 6px;
+        line-height: 20px;
     }
     .reveal-stagger.in-view > *:nth-child(2) {
         text-align: center;
     }
     .entourage-row .note {
         line-height: 1;
+        font-size: 1rem;
     }
     .entourage-flower-top-left,
     .entourage-flower-bottom-left {
@@ -1366,7 +1371,8 @@ button {
     align-items: flex-end;
     justify-content: center;
     gap: 6px;
-    margin-top: 20px;
+    width: 250px;
+    margin: 15px auto 0px;
 }
 .dress-figures svg {
     height: 110px;
@@ -1375,11 +1381,6 @@ button {
 .dress-figures img {
     width: 100%;
     height: auto;
-}
-
-.dress-figures.sponsor {
-    width: 150px;
-    margin: 0 auto;
 }
 
 /* ============ WEDDING DETAILS ============ */
@@ -1406,7 +1407,7 @@ button {
 }
 .details-title {
     font-family: var(--display);
-    font-size: clamp(2rem, 5vw, 3rem);
+    font-size: 30px;
     letter-spacing: 0.05em;
     color: var(--white);
 }
@@ -1506,6 +1507,7 @@ button {
 @media (max-width: 720px) {
     .details-media {
         grid-template-columns: 1fr;
+        margin-top: 15px;
     }
     .details-card {
         margin-top: -120px;
@@ -1542,7 +1544,7 @@ button {
 }
 .dresscode-group .rule {
     font-family: var(--body);
-    font-size: 1rem;
+    font-size: 0.9rem;
     line-height: 1.7;
     margin-bottom: 6px;
 }
@@ -1566,6 +1568,9 @@ button {
     align-items: center;
     gap: 8px;
 }
+.swatch.mt-10 {
+    margin-top: 10px;
+}
 .swatch-circle {
     width: 52px;
     height: 52px;
@@ -1580,7 +1585,7 @@ button {
 }
 .swatch span {
     font-family: var(--utility);
-    font-size: 0.62rem;
+    font-size: 0.6rem;
     letter-spacing: 0.06em;
     text-transform: uppercase;
     color: #6b675f;
@@ -1652,7 +1657,7 @@ button {
     font-family: var(--utility);
     font-weight: 700;
     font-size: 0.9rem;
-    color: var(--charcoal);
+    color: var(--coral-deep);
     letter-spacing: 0.02em;
 }
 .reminder-card .tap-hint {
@@ -1819,6 +1824,9 @@ button {
 .faq-item p strong {
     font-weight: 700;
 }
+.mobile-only {
+    display: none;
+}
 @media (max-width: 760px) {
     .faq-grid {
         grid-template-columns: 1fr;
@@ -1829,6 +1837,28 @@ button {
     }
     .faq-item:last-child {
         border-bottom: none;
+        margin-bottom: 0px;
+    }
+    .web-en {
+        display: none;
+    }
+    .mobile-only {
+        display: block;
+    }
+    .story-text p:last-child {
+        font-size: 1rem;
+    }
+    .details-verse {
+        font-size: 0.9rem;
+        color: #ebebeb;
+    }
+    .details-verse-ref {
+        font-size: 0.7rem;
+        color: #ebebeb;
+    }
+    .faq h2 {
+        font-size: 22px;
+        line-height: normal;
     }
 }
 
@@ -1961,7 +1991,7 @@ button {
 
 @media (max-width: 760px) {
     .section-eyebrow {
-        font-size: clamp(1.8rem, 8vw, 2.35rem);
+        font-size: clamp(1.8rem, 7.5vw, 2.35rem);
     }
     .section-sub {
         font-size: 1rem;
@@ -1974,14 +2004,20 @@ button {
     .entourage,
     .dresscode,
     .reminders,
-    .faq,
-    .rsvp-section {
+    .faq {
         padding-left: 20px;
         padding-right: 20px;
     }
+    .section-eyebrow span {
+        font-size: 27px;
+    }
+    .rsvp-section {
+        padding-left: 0px;
+        padding-right: 0px;
+    }
     .story {
         padding-top: 50px;
-        padding-bottom: 90px;
+        padding-bottom: 50px;
     }
     .story-body {
         gap: 45px;
@@ -1991,12 +2027,12 @@ button {
         gap: 12px;
     }
     .story-text p {
-        font-size: 0.96rem;
+        font-size: 0.88rem;
         line-height: 1.75;
     }
     .timeline-section {
-        padding-top: 72px;
-        padding-bottom: 76px;
+        padding-top: 50px;
+        padding-bottom: 50px;
     }
     .timeline {
         gap: 10px;
@@ -2013,21 +2049,21 @@ button {
         text-align: right;
     }
     .timeline-item:nth-child(2) .timeline-icon img {
-        height: 45px;
+        height: 40px;
     }
 
     .timeline-icon {
-        width: 62px;
-        height: 62px;
+        width: 55px;
+        height: 55px;
         padding: 9px;
     }
     .swatches {
-        gap: 7px;
+        gap: 9px;
     }
     .timeline-label {
         flex: 1;
         max-width: none;
-        font-size: 0.95rem;
+        font-size: 0.8rem;
     }
     .video-frame {
         aspect-ratio: 5 / 3;
@@ -2052,9 +2088,12 @@ button {
     .video-buttons-right {
         gap: 12px;
     }
+    .dress-figures {
+        width: 200px;
+    }
     .entourage {
-        padding-top: 74px;
-        padding-bottom: 82px;
+        padding-top: 50px;
+        padding-bottom: 50px;
     }
     .entourage-title {
         margin-bottom: 36px;
@@ -2063,7 +2102,7 @@ button {
         margin-top: 42px;
     }
     .entourage-row p {
-        font-size: 1rem;
+        font-size: 0.9rem;
     }
     .details-banner {
         min-height: 45vh;
@@ -2084,7 +2123,7 @@ button {
         font-size: 1.25rem;
     }
     .details-address {
-        font-size: 0.9rem;
+        font-size: 0.7rem;
         line-height: 1.65;
     }
     .details-media img,
@@ -2100,6 +2139,21 @@ button {
     }
     .dresscode-groups {
         margin-top: 44px;
+    }
+    .dresscode-group h4 {
+        font-size: 1.5rem;
+    }
+    .dresscode-group .rule {
+        font-size: 0.8rem;
+    }
+    .dresscode-group .semi {
+        margin-bottom: 5px;
+    }
+    .reminder-card h4 {
+        font-size: 1.5rem;
+    }
+    .reminder-card p {
+        font-size: 0.88rem;
     }
     .swatch-circle {
         width: 44px;
@@ -2117,8 +2171,8 @@ button {
         padding: 30px 20px 28px;
     }
     .faq {
-        padding-top: 76px;
-        padding-bottom: 84px;
+        padding-top: 50px;
+        padding-bottom: 50px;
     }
     .faq-grid {
         margin-top: 44px;
@@ -2136,6 +2190,7 @@ button {
         padding-bottom: 84px;
     }
     .rsvp-sub {
+        margin-top: 0px;
         font-size: 0.98rem;
     }
     .rsvp-form-wrap {
@@ -2150,13 +2205,17 @@ button {
         padding: 46px 20px 54px;
     }
     .footer-monogram {
-        width: 150px;
+        display: none;
     }
     .footer-names {
         font-size: 2.35rem;
     }
     .footer-share-text {
         font-size: 1rem;
+    }
+    .footer-qr{
+        width: 150px;
+        height: 150px;
     }
 }
 
