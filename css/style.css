@@ -1615,12 +1615,6 @@ button {
     text-transform: uppercase;
     color: #6b675f;
 }
-@media (max-width: 700px) {
-    .dresscode-groups {
-        grid-template-columns: 1fr;
-        gap: 48px;
-    }
-}
 
 /* ============ REMINDERS ============ */
 .reminders {
@@ -1890,6 +1884,10 @@ button {
     }
     .details-title {
         font-size: 30px;
+    }
+    .dresscode-groups {
+        grid-template-columns: 1fr;
+        gap: 48px !important;
     }
 }
 
