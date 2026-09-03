@@ -1407,13 +1407,13 @@ button {
 }
 .details-title {
     font-family: var(--display);
-    font-size: 30px;
+    font-size: clamp(1.9rem, 4vw, 2.6rem);
     letter-spacing: 0.05em;
     color: var(--white);
 }
 .details-verse {
     font-family: var(--script);
-    font-size: 1.5rem;
+    font-size: 1.2rem;
     margin-top: 18px;
     color: var(--white);
 }
@@ -1860,6 +1860,9 @@ button {
         font-size: 22px;
         line-height: normal;
     }
+    .details-title {
+        font-size: 30px;
+    }
 }
 
 /* ============ RSVP ============ */
@@ -2213,7 +2216,7 @@ button {
     .footer-share-text {
         font-size: 1rem;
     }
-    .footer-qr{
+    .footer-qr {
         width: 150px;
         height: 150px;
     }
