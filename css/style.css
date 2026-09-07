@@ -1931,7 +1931,7 @@ button {
 /* ============ FOOTER ============ */
 .site-footer {
     position: relative;
-    padding: 60px 6vw 60px;
+    padding: 50px 6vw 50px;
     background: linear-gradient(115deg, #e0f1fc 0%, #fff 45%, #f7e3e9 100%);
     display: flex;
     align-items: center;
@@ -1958,8 +1958,8 @@ button {
     margin-top: 0px;
 }
 .footer-qr {
-    width: 120px;
-    height: 120px;
+    width: 170px;
+    height: 170px;
     flex-shrink: 0;
     border: 1px solid var(--cream-deep);
     border-radius: 4px;
